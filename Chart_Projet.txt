@@ -1,0 +1,6 @@
+Projet structure de donnees:
+
+Structure de donnes: Liste Chainés
+Boite allumete: combinaison de  x,o,empty sur une grille de 3x3 cases.
+
+Grille = tableau 2d X=0,O=1,empty=2
