@@ -5,13 +5,10 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <assert.h>
+#include <string.h>
 #include <stdlib.h>
 #include "HvC_GamePlay.h"
 #include <stdbool.h>
-#include "Gameplay.h"
-#include "conio.h"
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wstring-compare"
 #ifdef _WIN32
 #define CLEAR "cls"
 #else //In any other OS
@@ -19,7 +16,6 @@
 #endif
 void HumanTurn(_Human Aymane,uint8_t g[9]){
     bool validMove=false;
-    uint8_t moveLocation;
     int choice;
     while(validMove==false){
         printf("Enter your Move: ");
@@ -128,9 +124,20 @@ bool checkAvailability(uint8_t grille[9],uint8_t choice){
     }
     return locationAvailable;
 }
+uint8_t arrayvalues(uint8_t g[9]){
+    uint8_t e;
+    for(int i=0;i<9;i++){
+        e+=g[i];
+    }
+    return e;
+}
 void Gameplay_HvC(_Human Aymane, _Computer Beta){
     int s;
+    char *dejaVu;
+
     uint8_t g[9] = {0,0,0,0,0,0,0,0,0};
+    uint8_t de= arrayvalues(g);
+    printf("%d",de);
     print_grille_2d(g);
     bool endOfGame=false;
     printf("Would you like to play as X or O (1=x,2=o)\n");
@@ -143,10 +150,11 @@ void Gameplay_HvC(_Human Aymane, _Computer Beta){
         Aymane.s=2;
     }
     int count=0;
-    while(!endOfGame ){
+    while(!endOfGame){
 
         HumanTurn(Aymane,g);
         count++;
+     //   strncat(dejaVu,de,9);
         if(WinningEOG(g)==true){
             printf("Congratulation You Win this Game\n");
             endOfGame=true;
@@ -159,14 +167,13 @@ void Gameplay_HvC(_Human Aymane, _Computer Beta){
         }
         ComputerTurn(Beta,g);
         count++;
+  //      strncat(dejaVu,de,9);
         if(WinningEOG(g)==true){
             printf("You Lose this Game, Better Luck Next Time\n");
             endOfGame=true;
             break;
         }
     }
-
+    printf("%s\n",dejaVu);
     printf("End of the Game\n");
 }
-
-#pragma clang diagnostic pop

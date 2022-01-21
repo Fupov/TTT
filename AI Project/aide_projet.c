@@ -5,8 +5,8 @@
 
 #define CONTINUE 0
 #define FINISHED 1
-
 /*
+
 typedef enum transformation{ID, ROT_90, ROT_180, ROT_270, MIROIR_VERT, MIROIR_HORIZ} transformation;
 
 char print_value(uint8_t value);
@@ -173,5 +173,4 @@ int main() {
 
 
     return EXIT_SUCCESS;
-}
-*/
+}*/

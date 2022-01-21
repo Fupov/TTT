@@ -5,6 +5,7 @@
 #ifndef STRUCTURES_DE_DONNEES_HVC_H
 #define STRUCTURES_DE_DONNEES_HVC_H
 #include <stdlib.h>
+#include <stdbool.h>
 #include "Player.h"
 #ifdef _WIN32
 #define CLEAR "cls"
@@ -19,5 +20,4 @@ void HumanTurn(_Human Aymane,uint8_t g[9]);
 void ComputerTurn(_Computer Beta, uint8_t g[9]);
 
 bool WinningEOG(uint8_t g[9]);
-bool DrawEOG(uint8_t g[9]);
 #endif //STRUCTURES_DE_DONNEES_HVC_H

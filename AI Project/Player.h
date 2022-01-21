@@ -1,7 +1,6 @@
 //
 // Created by tchic on 17/01/2022.
 //
-#include "Gameplay.h"
 #include <stdint.h>
 #ifndef STRUCTURES_DE_DONNEES_PLAYER_H
 #define STRUCTURES_DE_DONNEES_PLAYER_H

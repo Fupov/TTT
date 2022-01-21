@@ -4,11 +4,9 @@
 
 #include <stdio.h>
 #include <stdint.h>
-#include <assert.h>
 #include <stdlib.h>
 #include "CvC_GamePlay.h"
 #include <stdbool.h>
-#include "conio.h"
 #ifdef _WIN32
 #define CLEAR "cls"
 #else //In any other OS
@@ -23,15 +21,6 @@ void AITurn(_Computer Beta, uint8_t g[9]){
         validMove = checkAvailability(g, choice);
     }
     g[choice-1]=Beta.s;
-}
-bool checkAvailable(uint8_t grille[9],uint8_t moveLocation){
-    bool locationAvailable;
-    if(moveLocation==0){
-        locationAvailable=true;
-    }else{
-        locationAvailable=false;
-    }
-    return locationAvailable;
 }
 bool WinningEOG(uint8_t grille[9]){
     if( ( grille[0] ==1 ) && (1 == grille[3] ) && (1 == grille[6] ) )
@@ -84,19 +73,6 @@ bool WinningEOG(uint8_t grille[9]){
         return true;
     }else{
         return false;
-    }
-}
-bool DrawEOG(uint8_t g[9]){
-    uint8_t count=0;
-    for(uint8_t i=0;i<9;i++){
-        if(g[i]==0){
-            count++;
-        }
-    }
-    if(count>0){
-        return false;
-    }else{
-        return true;
     }
 }
 void Gameplay_CvC(_Computer Tchich,_Computer Chaussard, uint32_t rounds){
