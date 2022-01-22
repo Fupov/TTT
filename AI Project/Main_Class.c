@@ -4,7 +4,8 @@
 #include "HvC_GamePlay.h"
 #include <stdbool.h>
 #include <stdlib.h>
-#include "conio.h"
+#include <conio.h>
+#include "Player.h"
 #ifdef _WIN32
 #define CLEAR "cls"
 #else //In any other OS
@@ -59,9 +60,9 @@ int main()
         }
     }while(choice!=3);
     system(CLEAR);
-    printf("------------------------------------- \n");
-	printf("---Jeu Realiser Par Aymane TCHICH --- \n");
-    printf("------------------------------------- \n");
+    printf("---------------------------------------- \n");
+	printf("---Jeu Realiser Par Aymane && Ilyes  --- \n");
+    printf("---------------------------------------- \n");
 
     getch();
     return EXIT_SUCCESS;

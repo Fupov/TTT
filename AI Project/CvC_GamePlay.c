@@ -98,8 +98,7 @@ void Gameplay_CvC(_Computer Tchich,_Computer Chaussard, uint32_t rounds){
                 Chaussard.lose++;
                 endOfGame=true;
                 break;
-            }
-            if(count==9){
+            }else if(count==9){
                 Tchich.draw++;
                 Chaussard.draw++;
                 endOfGame=true;
