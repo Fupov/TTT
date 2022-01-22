@@ -124,20 +124,11 @@ bool checkAvailability(uint8_t grille[9],uint8_t choice){
     }
     return locationAvailable;
 }
-uint8_t arrayvalues(uint8_t g[9]){
-    uint8_t e;
-    for(int i=0;i<9;i++){
-        e+=g[i];
-    }
-    return e;
-}
 void Gameplay_HvC(_Human Aymane, _Computer Beta){
     int s;
     char *dejaVu;
 
     uint8_t g[9] = {0,0,0,0,0,0,0,0,0};
-    uint8_t de= arrayvalues(g);
-    printf("%d",de);
     print_grille_2d(g);
     bool endOfGame=false;
     printf("Would you like to play as X or O (1=x,2=o)\n");
