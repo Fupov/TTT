@@ -126,8 +126,6 @@ bool checkAvailability(uint8_t grille[9],uint8_t choice){
 }
 void Gameplay_HvC(_Human Aymane, _Computer Beta){
     int s;
-    char *dejaVu;
-
     uint8_t g[9] = {0,0,0,0,0,0,0,0,0};
     print_grille_2d(g);
     bool endOfGame=false;
@@ -145,7 +143,6 @@ void Gameplay_HvC(_Human Aymane, _Computer Beta){
 
         HumanTurn(Aymane,g);
         count++;
-     //   strncat(dejaVu,de,9);
         if(WinningEOG(g)==true){
             printf("Congratulation You Win this Game\n");
             endOfGame=true;
@@ -157,13 +154,11 @@ void Gameplay_HvC(_Human Aymane, _Computer Beta){
         }
         ComputerTurn(Beta,g);
         count++;
-  //      strncat(dejaVu,de,9);
         if(WinningEOG(g)==true){
             printf("You Lose this Game, Better Luck Next Time\n");
             endOfGame=true;
             break;
         }
     }
-    printf("%s\n",dejaVu);
     printf("End of the Game\n");
 }
