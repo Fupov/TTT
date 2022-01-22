@@ -146,8 +146,8 @@ void Gameplay_HvC(_Human Aymane, _Computer Beta){
         Aymane.s=2;
         Beta.s=1;
     }else{
-        Beta.s=1;
-        Aymane.s=2;
+        Beta.s=2;
+        Aymane.s=1;
     }
     int count=0;
     while(!endOfGame){
