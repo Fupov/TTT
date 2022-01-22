@@ -159,8 +159,7 @@ void Gameplay_HvC(_Human Aymane, _Computer Beta){
             printf("Congratulation You Win this Game\n");
             endOfGame=true;
             break;
-        }
-        if(count==9){
+        }else if(count==9){
             printf("Its A Draw\n");
             endOfGame=true;
             break;
